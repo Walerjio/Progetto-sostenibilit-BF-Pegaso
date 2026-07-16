@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sostenibilità Gruppo BF | Report 2023</title>
+    <link rel="stylesheet" href="css-tesi.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Barra di navigazione-->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">
+                <img src="bf-spa-logo.png" alt="Logo Gruppo BF" class="logo-img">
+            </a>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="#chi-siamo" data-key="navContesto">Contesto</a></li>
+            <li><a href="#kpi" data-key="navRisultati">Risultati</a></li>
+            <li><a href="#pilastri" data-key="navPilastri">Pilastri</a></li>
+            <li><a href="#download" class="nav-btn" data-key="btnDownload">Report PDF</a></li>
+        </ul>
+
+        <div class="nav-controls">
+            <!-- Pulsante Cambio Tema-->
+            <button id="theme-toggle" class="theme-btn">🌓</button>
+
+            <!-- Menu delle Lingue -->
+            <div class="lang-menu">
+                <button class="lang-current">🇮🇹</button>         
+                <div class="lang-dropdown">
+                    <span onclick="changeLang('it')">🇮🇹 IT</span>
+                    <span onclick="changeLang('en')">🇬🇧 EN</span>
+                    <span onclick="changeLang('fr')">🇫🇷 FR</span>
+                    <span onclick="changeLang('es')">🇪🇸 ES</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <h1 id="hero-title" data-key="heroTitle">Agricoltura Rigenerativa e Innovazione</h1>
+        <p data-key="heroSub">Analisi della strategia ESG del Gruppo BF S.p.A.</p>
+    </div>
+</header>
+<!--Inizio del Main-->
+    <main>
+    <section id="chi-siamo" class="section-card"><h2 data-key="titoloContesto">Il Contesto Operativo</h2>
+        <p data-key="descrizioneContesto">Il <strong>Gruppo BF</strong> Rappresenta il più importante operatore agroindustriale italiano</p>
+    </section>
+<!--KPI-->
+        <section id="kpi" class="kpi-grid">
+            <div class="kpi-item">
+    <span class="kpi-num" data-target="7500">0</span>
+    <p data-key="kpiEttari">Ettari in Agricoltura di Precisione</p>
+</div>
+            <div class="kpi-item">
+                <span class="kpi-num" data-target="100">0</span>
+                <p data-key="kpiSementi">% Sementi Certificate</p>
+            </div>
+            <div class="kpi-item">
+<span class="kpi-num" data-target="45001">0</span>
+                <p data-key="kpiSicurezza">Certificazione Sicurezza ISO</p>
+            </div>
+        </section>
+<!--Pilastri-->
+        <section id="pilastri" class="pilastri">
+            <h2 data-key="titoloPilastri">Pilastri della Strategia ESG</h2>
+            <div class="pilastri-container">
+                <div class="pilastro-card">
+                    <h3 data-key="cardAmbienteTitolo">Ambiente</h3>
+                    <p data-key="cardAmbienteDesc">Monitoraggio satellitare e agricoltura 4.0.</p>
+                    <button class="btn-more" data-key="btnScopri" onclick="apriModal('modal-ambiente')">Scopri di più</button>
+                </div>
+
+                <div class="pilastro-card">
+                    <h3 data-key="cardSocialeTitolo">Sociale</h3>
+                    <p data-key="cardSocialeDesc">Sicurezza sul lavoro e formazione continua.</p>
+                    <button class="btn-more" data-key="btnScopri" onclick="apriModal('modal-sociale')">Scopri di più</button>
+                </div>
+
+                <div class="pilastro-card">
+                    <h3 data-key="cardGovernanceTitolo">Governance</h3>
+                    <p data-key="cardGovernanceDesc">Modello di business trasparente e obiettivi integrati.</p>
+                    <button class="btn-more" data-key="btnScopri" onclick="apriModal('modal-governance')">Scopri di più</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="modal-container" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="chiudiModal()">&times;</span>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+<!--Download documento-->
+        <section id="download" class="download-section">
+            <h2 data-key="downloadTitolo">📄 Informazioni</h2>
+            <p data-key="downloadDesc">Consulta il documento integrale approvato dal CdA per i dettagli metodologici.</p>
+            <a href="Dichiarazione-finanziaria.pdf" class="btn-download" data-key="btnDownload" download>
+                Scarica DNF 2023 (PDF)
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p data-key="footerText">© 2026 Analisi Sostenibilità | Sviluppato per Progetto Didattico Avanzato</p>
+    </footer>
+<!--Tema-->
+    <script src="Tema.js"></script>
+</body>
+</html>
